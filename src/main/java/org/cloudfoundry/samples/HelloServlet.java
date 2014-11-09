@@ -24,7 +24,6 @@ public class HelloServlet extends HttpServlet {
 			int dockerIPAddressEnd = ssh_client_info.indexOf(" ", portEnd + 1);
 			ip_addr = ssh_client_info.substring(portEnd + 1, dockerIPAddressEnd);
 		}
-		//comments added
 		writer.println("Hello from " + ip_addr + ":" + System.getenv("VCAP_APP_PORT"));
 		writer.close();
 	}
